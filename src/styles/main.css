@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'iransansxv';
+    src: url('../fonts/IranSansX/Variable/webfont/IRANSansXV.woff') format('woff-variations'),
+    /* will be the standard and works in Safari now */
+    url('../fonts/IranSansX/Variable/webfont/IRANSansXV.woff') format('woff');
+    /* for the other supporting browsers */
+    font-weight: 100 900;
+    font-display: fallback;
+ 
+ }
+ @font-face {
+    font-family: iransansx;
+    src: url('../fonts/IranSansX/Webfonts/fonts/woff/IRANSansX-Regular.woff') format('woff');
+ }
+ @font-face {
+    font-family: iransansx;
+    src: url('../fonts/IranSansX/Webfonts/fonts/woff/IRANSansX-Bold.woff') format('woff');
+    font-weight: 700;
+ }
+ 
+ body {
+   font-family: iransansx, tahoma !important;
+ }
