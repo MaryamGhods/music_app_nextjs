@@ -21,7 +21,7 @@ const Discover = (props) => {
   // }
   return (
     <div className="w-full flex flex-col">
-        <h1 className="text-xl font-bold text-white m-4">صفحه اصلی</h1>
+        <h1 className="text-lg font-bold text-white m-4">صفحه اصلی</h1>
         <div className="flex flex-wrap md:justify-start justify-center items-center gap-4">
           {data?.map( (song, i) => (
             <SongCard 

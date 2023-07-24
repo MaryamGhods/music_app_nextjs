@@ -17,9 +17,9 @@ const SongCard = ({song, i, isPlaying, activeSong, data}) => {
   };
 
   return (
-    <div className="flex flex-col sm:w-[200px] w-[46%] md:p-4 p-[2%] bg-white/5 bg-opacity-80 backdrop-blur-sm rounded-lg cursor-pointer">
+    <div className="flex flex-col sm:w-[186px] w-[46%] md:p-3 p-[2%] bg-white/5 bg-opacity-80 backdrop-blur-sm rounded-lg cursor-pointer">
       <div className="relative group">
-        <div className={`absolute inset-0 justify-center items-center rounded-2xl bg-black bg-opacity-50 group-hover:flex ${activeSong?.song_info?.name === song?.song_info?.name ? 'flex bg-black bg-opacity-70' : 'hidden'}`}>
+        <div className={`absolute inset-0 w-[160px] h-[160px] justify-center items-center rounded-2xl bg-black bg-opacity-50 group-hover:flex ${activeSong?.song_info?.name === song?.song_info?.name ? 'flex bg-black bg-opacity-70' : 'hidden'}`}>
           <PlayPause 
             song={song}
             isPlaying={isPlaying}
@@ -28,17 +28,17 @@ const SongCard = ({song, i, isPlaying, activeSong, data}) => {
             handlePlay={handlePlayClick}
           />
         </div>
-        <div className="sm:w-[168px] w-[100%] sm:h-[168px] h-[150px]">
+        <div className="sm:w-[160px] w-[100%] sm:h-[160px] h-[160px]">
           <Image src={song.song_info.song_image.cover.url} alt={song.song_info.name} className="bg-black/20 rounded-2xl w-full h-full" width={200} height={200} />
         </div>
       </div>
       <div className="flex flex-col pt-2 pr-2">
-          <h4 className="text-white text-base truncate">
+          <h4 className="text-white text-sm truncate">
             <Link href={`/songs/${song?.song_info.name}`}>
               {song.song_info.name}
             </Link>
           </h4>
-          <p className="text-gray-500 text-sm truncate pt-1">
+          <p className="text-gray-500 text-xs truncate pt-1">
             <Link href={`/artists/${song?.artist_info.fullName}`}>
               {song.artist_info.fullName}
             </Link>

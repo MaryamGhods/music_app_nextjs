@@ -28,7 +28,7 @@ const TopArtists = (props) => {
         <title>دنیای موزیک|برترین خواننده ها</title>
       </Head>
       <div className="w-full flex flex-col">
-        <h1 className="text-xl font-bold text-white m-4">خواننده های برتر</h1>
+        <h1 className="text-lg font-bold text-white m-4">خواننده های برتر</h1>
         <div className="flex flex-wrap md:justify-start justify-center items-center gap-4">
           {data?.map( (song, i) => (
             <ArtistCard 

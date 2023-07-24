@@ -39,7 +39,7 @@ const Search = () => {
   
   return (
     <div className="w-full flex flex-col">
-      <h1 className="text-xl font-bold text-white mx-4 my-8">نتایج جستجو</h1>
+      <h1 className="text-lg font-bold text-white mx-4 my-8">نتایج جستجو</h1>
       <div className="flex flex-wrap md:justify-start justify-center items-center gap-4">
         {(foundedItems?.length !== 0) ?
           foundedItems.map( (song, i) => (

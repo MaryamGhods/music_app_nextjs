@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect , useRef } from "react";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode } from "swiper";
@@ -9,13 +9,19 @@ import "swiper/css/free-mode";
 import Image from "next/image";
 
 const TopPlay = () => {
+  const divRef = useRef(null);
+
+  useEffect(() => {
+    divRef.current.scrollIntoView({ behavior: 'smooth'});
+  });
+
   const { data, isFetching, error } = useGetTopChartsQuery();
   const topPlays = data?.results.slice(0, 5);
 
   return(
-    <div className="md:w-[280px] w-full md:pt-4 pt-8 px-4 flex flex-col">
+    <div ref={divRef} className="md:w-[280px] w-full md:pt-4 pt-14 px-1 flex flex-col">
       <div className="flex flex-row my-4 justify-between">
-        <h2 className="text-white text-lg">آهنگ های برتر</h2>
+        <h2 className="text-white text-base">آهنگ های برتر</h2>
         <Link href={"/top-songs"}>
           <p className="text-gray-300 text-sm ">موارد بیشتر</p>
         </Link>
@@ -29,8 +35,8 @@ const TopPlay = () => {
         />
         )
       )}
-      <div className="flex flex-row my-4 justify-between">
-        <h2 className="text-white text-lg">خواننده های برتر</h2>
+      <div className="flex flex-row my-2 justify-between">
+        <h2 className="text-white text-base">خواننده های برتر</h2>
         <Link href={"/top-artists"}>
           <p className="text-gray-300 text-sm ">موارد بیشتر</p>
         </Link>
@@ -42,7 +48,7 @@ const TopPlay = () => {
         centeredSlides
         centeredSlidesBounds
         modules={[FreeMode]}
-        className="my-4"
+        className="my-2"
       >
         {topPlays?.map((song, i) => (
           <SwiperSlide

@@ -21,13 +21,13 @@ const Track = ({ isPlaying, isActive, activeSong }) => {
   return(
   <div className="flex-1 flex items-center justify-start">
     <div>
-      <RiCloseLine className="w-8 h-8 text-white mr-2 cursor-pointer border-2 rounded-lg hover:bg-white/5" onClick={handleCloseBtn} /> 
+      <RiCloseLine className="w-8 h-8 sm:m-0 m-2 text-white cursor-pointer border-2 rounded-full hover:bg-white/5" onClick={handleCloseBtn} /> 
     </div>
     <div className={`${isPlaying && isActive ? 'animate-[spin_3s_linear_infinite]' : ''} hidden sm:block h-16 w-16 mx-8`}>
-      <Image src={activeSong?.song_info.song_image.cover.url} alt={activeSong?.song_info.name} className="rounded-full" width={64} hight={64} />
+      <Image src={activeSong?.song_info.song_image.cover.url} alt={activeSong?.song_info.name} className="rounded-full" width={64} height={64} />
     </div>
-    <div className="w-[50%]">
-      <p className="truncate text-white font-bold text-lg">
+    <div className="w-[100%]">
+      <p className="truncate text-white font-bold sm:text-lg text-sm">
         {activeSong?.song_info.name ? activeSong?.song_info.name  : 'No active Song'}
       </p>
       <p className="truncate text-gray-300">

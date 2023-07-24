@@ -19,15 +19,15 @@ const TopChartCard = ({i, song, data}) => {
 
   return(
     <div className="w-full flex flex-row items-center hover:bg-[#b05bcc7a] py-1 p-2 rounded-lg cursor-pointer mb-1">
-      <span className="text-white font-semibold pl-4">{i+1}. </span>
-      <Image src={song.song_info.song_image.cover.url} alt={song.song_info.name} width={56} height={56} className="bg-white/10 w-14 h-14 rounded-lg" />  
+      <span className="text-white font-semibold pl-2">{i+1}. </span>
+      <Image src={song.song_info.song_image.cover.url} alt={song.song_info.name} width={56} height={56} className="bg-white/10 w-12 h-12 rounded-lg" />  
       <div className="flex-1 flex flex-col justify-center mx-3">
-        <h4 className="text-white text-base truncate">
+        <h4 className="text-white text-sm truncate">
           <Link href={`/songs/${song?.song_info.name}`}>
             {song.song_info.name}
           </Link>
         </h4>
-        <p className="text-gray-400 text-sm truncate pt-1">
+        <p className="text-gray-400 text-xs truncate pt-1">
             <Link href={`/artists/${song?.artist_info.fullName}`}>
               {song.artist_info.fullName}
             </Link>
