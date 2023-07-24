@@ -25,7 +25,7 @@ function Layout({ children }){
     </div>
 
       {activeSong?.song_info?.name && (
-        <div className="absolute h-28 bottom-0 left-0 right-0 flex animate-slideup bg-gradient-to-br from-white/10 to-[#431b50] backdrop-blur-lg rounded-t-3xl z-10">
+        <div className="absolute h-28 sm:bottom-0 bottom-[140px] left-0 right-0 flex animate-slideup bg-gradient-to-br from-white/10 to-[#431b50] backdrop-blur-lg rounded-t-3xl z-10">
           <MusicPlayer />
         </div>
       )}
